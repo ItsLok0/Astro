@@ -23,6 +23,7 @@ const tags = Astro.props.frontmatter.tags || [];
     }
 </style>
 <BaseLayout pageTitle={frontmatter.title}>
+    <p>{frontmatter.pubDate.toLocaleDateString()}</p>
     <p><em>{frontmatter.description}</em></p>
     <p>Écrit par : {frontmatter.author}</p>
     <img src={frontmatter.image.url} width="300" alt={frontmatter.image.alt} />
